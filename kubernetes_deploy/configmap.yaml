@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vault-unseal
+data:
+  VAULT_ADDR: http://vault-sealed:8200
+  VAULT_MAX_KEYS: "5"
+  VAULT_SKIP_VERIFY: "1"
+  VAULT_UNSEAL_KEY_1:
+  VAULT_UNSEAL_KEY_2:
+  VAULT_UNSEAL_KEY_3:
+  VAULT_UNSEAL_KEY_4:
+  VAULT_UNSEAL_KEY_5:
