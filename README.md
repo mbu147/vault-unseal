@@ -61,6 +61,7 @@ spec:
   type: ClusterIP
 ```
 ### Deployment
+please change `spec.template.spec.containers.image` to your image repository
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -93,7 +94,5 @@ spec:
           imagePullPolicy: Always
           name: vault-unseal
       dnsPolicy: ClusterFirst
-      imagePullSecrets:
-        - name: cx-harbor
       restartPolicy: Always
 ```
